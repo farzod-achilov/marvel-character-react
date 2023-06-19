@@ -1,27 +1,28 @@
 import { Alert, Grid, LinearProgress } from "@mui/material";
-import CharacterCard from "../card/CharacterCard";
+import ComicsCard from "../comicsCard/ComicsCard";
 
-export default function CharacterList({ characters, loading, error }) {
+export default function ComicsList({ comisces, loading, error }) {
   if (loading) return <LinearProgress />;
 
   if (error) return <Alert severity="error">{error.toString()}</Alert>;
   return (
     <Grid container spacing={2}>
-      {characters.map((character) => (
+      {comisces?.map((comisc) => (
         <Grid
-          key={character.id}
+          key={comisc.id}
           display={"flex"}
           justifyContent={"center"}
           alignItems={"center"}
           item
-          xs={12}
+          xs={6}
           lg={3}
-          md={6}
+          md={4}
         >
-          <CharacterCard
-            title={character.name}
-            img={`${character.thumbnail.path}.${character.thumbnail.extension}`}
-            id={character.id}
+          <ComicsCard
+            price={comisc.prices[0].price}
+            title={comisc.title}
+            img={`${comisc.thumbnail.path}.${comisc.thumbnail.extension}`}
+            id={comisc.id}
           />
         </Grid>
       ))}

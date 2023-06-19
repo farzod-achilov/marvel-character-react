@@ -3,3 +3,5 @@ export const ts = "25/01/2023, 05:58:15";
 export const hash = "4c1b759a2e5f993858c77f6c20f934b6";
 export const BASE_API_URL = `https://gateway.marvel.com:443/v1/public/`;
 export const PAGINATION_LIMIT = 8;
+
+export const PAGINATION_LIMIT_COMICS = 12;

@@ -1,6 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import App from "../App";
 import Characters from "../pages/characters/Characters";
+import Character from "../pages/characters/Character";
 
 const router = createBrowserRouter([
   {
@@ -12,9 +13,8 @@ const router = createBrowserRouter([
         element: <Characters />,
       },
       {
-        path: "/",
-        index: true,
-        element: <Characters />,
+        path: "/characters/:id",
+        element: <Character />,
       },
     ],
   },

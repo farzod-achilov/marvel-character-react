@@ -16,3 +16,9 @@ body {
 .layout__main {
   flex-grow: 1;
 }
+
+.layout__header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}

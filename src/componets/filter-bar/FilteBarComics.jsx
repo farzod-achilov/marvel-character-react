@@ -65,17 +65,33 @@ export default function FilterBar({ totalPages, loading }) {
               )
             }
             // value={age}
-            label="Sort By"
+            label="Format By"
             // onChange={handleChange}
           >
             <MenuItem value={"comic"}>comic</MenuItem>
             <MenuItem value={"magazine"}>magazine</MenuItem>
-            <MenuItem value={"trade+paperback"}>trade paperback</MenuItem>
+            <MenuItem
+              value={decodeURIComponent(encodeURIComponent("trade paperback"))}
+            >
+              trade paperback
+            </MenuItem>
             <MenuItem value={"hardcover"}>hardcover</MenuItem>
             <MenuItem value={"digest"}>digest</MenuItem>
-            <MenuItem value={"graphic+novel"}>graphic novel</MenuItem>
-            <MenuItem value={"digital+comic"}>digital comic</MenuItem>
-            <MenuItem value={"infinite+comic"}>infinite comic</MenuItem>
+            <MenuItem
+              value={decodeURIComponent(encodeURIComponent("graphic novel"))}
+            >
+              graphic novel
+            </MenuItem>
+            <MenuItem
+              value={decodeURIComponent(encodeURIComponent("digital comic"))}
+            >
+              digital comic
+            </MenuItem>
+            <MenuItem
+              value={decodeURIComponent(encodeURIComponent("infinite comic"))}
+            >
+              infinite comic
+            </MenuItem>
           </Select>
         </FormControl>
       </Grid>

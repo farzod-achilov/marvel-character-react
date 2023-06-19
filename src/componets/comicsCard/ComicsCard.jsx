@@ -23,6 +23,7 @@ export default function ComicsCard({ img, title, id, price }) {
             gutterBottom
             variant="h5"
             component="div"
+            title={title}
           >
             {title}
           </Typography>
